@@ -14,6 +14,8 @@ variables:
     description: The catalog to use
   schema:
     description: The schema to use
+  warehouse_id:
+    description: warehouseId
 
 targets:
   dev:
@@ -28,6 +30,7 @@ targets:
     variables:
       catalog: youtube_proj
       schema: dev
+      warehouse_id: 5496a0477b97f1e6
     presets:
       artifacts_dynamic_version: true
   prod:
@@ -39,6 +42,7 @@ targets:
     variables:
       catalog: youtube_proj
       schema: prod
+      warehouse_id: 5496a0477b97f1e6,
     permissions:
       - user_name: data.engineer.yogesh@gmail.com
         level: CAN_MANAGE
